@@ -1,0 +1,31 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - spec/dummy/**/*
+
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/ContextWording:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false

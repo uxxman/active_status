@@ -5,3 +5,7 @@ gemspec
 
 gem 'rake'
 gem 'rspec-rails'
+
+gem 'rubocop-rails', require: false
+gem 'rubocop-rspec', require: false
+gem 'rubocop-performance', require: false
