@@ -4,7 +4,7 @@ require "rails/all"
 
 Bundler.require(*Rails.groups)
 
-require "rails_health_status"
+require "active_status"
 
 module Dummy
   class Application < Rails::Application

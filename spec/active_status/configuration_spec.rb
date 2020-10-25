@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RailsHealthStatus::Configuration do
+RSpec.describe ActiveStatus::Configuration do
   let(:config) { described_class.new }
 
   describe '#initialize' do

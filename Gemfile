@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rails_health_status.gemspec
+# Specify your gem's dependencies in active_status.gemspec
 gemspec

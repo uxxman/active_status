@@ -1,4 +1,4 @@
-module RailsHealthStatus
+module ActiveStatus
   class Report
     attr_reader :errors
 
@@ -11,7 +11,7 @@ module RailsHealthStatus
     end
 
     def build
-      RailsHealthStatus.configuration.checks.each do |check|
+      ActiveStatus.configuration.checks.each do |check|
         begin
           send(check)
         rescue StandardError => e

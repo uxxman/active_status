@@ -1,4 +1,4 @@
-# RailsHealthStatus
+# ActiveStatus
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_health_status'
+gem 'active_status'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install rails_health_status
+$ gem install active_status
 ```
 
 ## Contributing

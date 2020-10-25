@@ -1,11 +1,11 @@
-require_relative 'lib/rails_health_status/version'
+require_relative 'lib/active_status/version'
 
 Gem::Specification.new do |spec|
-  spec.name        = 'rails_health_status'
-  spec.version     = RailsHealthStatus::VERSION
+  spec.name        = 'active_status'
+  spec.version     = ActiveStatus::VERSION
   spec.email       = ['uxman.sherwani@gmail.com']
   spec.authors     = ['Muhammad Usman']
-  spec.homepage    = 'https://github.com/uxxman/rails_health_status'
+  spec.homepage    = 'https://github.com/uxxman/active_status'
   spec.summary     = 'Summary of RailsStatusCheck.'
   spec.description = 'Description of RailsStatusCheck.'
   spec.license     = 'MIT'
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.metadata['homepage_uri']    = spec.homepage
   spec.metadata['source_code_uri'] = spec.homepage
-  spec.metadata['changelog_uri']   = 'https://github.com/uxxman/rails_health_status/releases'
+  spec.metadata['changelog_uri']   = 'https://github.com/uxxman/active_status/releases'
 
   spec.files            = Dir['{app,config,db,lib}/**/*']
   spec.extra_rdoc_files = Dir['README.md', 'LICENSE.txt']

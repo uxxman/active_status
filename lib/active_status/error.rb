@@ -1,4 +1,4 @@
-module RailsHealthStatus
+module ActiveStatus
   class Error
     attr_accessor :name, :error, :message
 
@@ -10,7 +10,7 @@ module RailsHealthStatus
 
     def as_json(_ = nil)
       hash = { name: name, error: error }
-      return hash unless RailsHealthStatus.configuration.verbose
+      return hash unless ActiveStatus.configuration.verbose
 
       hash.merge({ message: message })
     end

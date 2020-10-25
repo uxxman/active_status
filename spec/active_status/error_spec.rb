@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RailsHealthStatus::Error do
+RSpec.describe ActiveStatus::Error do
   let(:error) { described_class.new('name', StandardError, 'message') }
 
   describe '#initialize' do
@@ -18,7 +18,7 @@ RSpec.describe RailsHealthStatus::Error do
     end
 
     context 'when verbose is true' do
-      before { RailsHealthStatus.configuration.verbose = true }
+      before { ActiveStatus.configuration.verbose = true }
 
       it { is_expected.to include(:name, :error, :message) }
     end

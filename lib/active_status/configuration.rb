@@ -1,4 +1,4 @@
-module RailsHealthStatus
+module ActiveStatus
   class Configuration
     attr_accessor :checks, :error, :success, :verbose
 

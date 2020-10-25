@@ -1,4 +1,4 @@
-RailsHealthStatus.configure do |config|
+ActiveStatus.configure do |config|
   # config.success = 200
   # config.error   = 503
   # config.verbose = false

@@ -1,9 +1,9 @@
-require 'rails_health_status/error'
-require 'rails_health_status/engine'
-require 'rails_health_status/report'
-require 'rails_health_status/configuration'
+require 'active_status/error'
+require 'active_status/engine'
+require 'active_status/report'
+require 'active_status/configuration'
 
-module RailsHealthStatus
+module ActiveStatus
   class << self
     attr_accessor :configuration
   end

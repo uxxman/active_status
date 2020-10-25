@@ -6,13 +6,13 @@ RSpec.describe 'Status Request', type: :request do
       get '/status'
 
       expect(response.body).to be_empty
-      expect(response).to have_http_status(RailsHealthStatus.configuration.success)
+      expect(response).to have_http_status(ActiveStatus.configuration.success)
     end
   end
 
   context 'with errors' do
     before do
-      RailsHealthStatus.configuration.check :failing_check do
+      ActiveStatus.configuration.check :failing_check do
         raise StandardError
       end
     end
@@ -21,7 +21,7 @@ RSpec.describe 'Status Request', type: :request do
       get '/status'
 
       expect(response.body).to include('failing_check')
-      expect(response).to have_http_status(RailsHealthStatus.configuration.error)
+      expect(response).to have_http_status(ActiveStatus.configuration.error)
     end
   end
 end

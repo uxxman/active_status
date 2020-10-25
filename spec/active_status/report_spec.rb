@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe RailsHealthStatus::Report do
+RSpec.describe ActiveStatus::Report do
   let(:report) { described_class.new }
 
   describe '#initialize' do
@@ -23,7 +23,7 @@ RSpec.describe RailsHealthStatus::Report do
 
     context 'with errors' do
       before do
-        RailsHealthStatus.configuration.check :check_name do
+        ActiveStatus.configuration.check :check_name do
           raise StandardError
         end
 
