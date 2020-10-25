@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount RailsHealthStatus::Engine => "/rails_health_status"
+  mount RailsHealthStatus::Engine => "/status"
 end

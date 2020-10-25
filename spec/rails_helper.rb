@@ -8,6 +8,7 @@ require File.expand_path('../spec/dummy/config/environment.rb', __dir__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 
 require 'rspec/rails'
+require 'rails_health_status'
 
 RSpec.configure do |config|
   # The different available types are documented in the features, such as in
@@ -18,4 +19,6 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  config.before { RailsHealthStatus.reset_configuration }
 end
