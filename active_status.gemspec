@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'rails', '>= 5.2'
 
+  spec.add_development_dependency 'appraisal', '~> 2.3'
   spec.add_development_dependency 'simplecov', '~> 0.19.1'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.1'
   spec.add_development_dependency 'sqlite3', '~> 1.4', '>= 1.4.2'
