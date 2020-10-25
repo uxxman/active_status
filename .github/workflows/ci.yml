@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+    
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Appraisal dependencies
+        run: bundle exec appraisal install
+      
+      - name: Appraisal tests
+        run: bundle exec appraisal rspec
+
+      - name: Run tests
+        run: bundle exec rspec
+
+      - name: Code Climate
+        uses: paambaati/codeclimate-action@v2.7.4
+        env:
+          CC_TEST_REPORTER_ID: 04f327766201022b95cfa162687d44617cdf21e48bb45b3b4c9ab8f0788634c6
