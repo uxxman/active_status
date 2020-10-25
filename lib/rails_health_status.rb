@@ -4,17 +4,17 @@ require 'rails_health_status/report'
 require 'rails_health_status/configuration'
 
 module RailsHealthStatus
-  def configuration
-    @configuration ||= Configuration.new
+  class << self
+    attr_accessor :configuration
   end
 
-  def configure
+  def self.configure
+    self.configuration ||= Configuration.new
+
     yield configuration
   end
 
-  def reset_configuration
-    @configuration = Configuration.new
+  def self.reconfigure
+    self.configuration = Configuration.new
   end
-
-  module_function :configure, :configuration, :reset_configuration
 end

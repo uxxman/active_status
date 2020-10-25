@@ -163,7 +163,7 @@ GEM
       rubocop (~> 0.87)
       rubocop-ast (>= 0.7.1)
     ruby-progressbar (1.10.1)
-    simplecov (0.19.0)
+    simplecov (0.19.1)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.3)
@@ -190,13 +190,13 @@ PLATFORMS
 
 DEPENDENCIES
   rails_health_status!
-  rake
-  rspec-rails
-  rubocop-performance
-  rubocop-rails
-  rubocop-rspec
-  simplecov
-  sqlite3
+  rake (~> 13.0, >= 13.0.1)
+  rspec-rails (~> 4.0, >= 4.0.1)
+  rubocop-performance (~> 1.8, >= 1.8.1)
+  rubocop-rails (~> 2.8, >= 2.8.1)
+  rubocop-rspec (~> 1.44, >= 1.44.1)
+  simplecov (~> 0.19.1)
+  sqlite3 (~> 1.4, >= 1.4.2)
 
 BUNDLED WITH
    2.1.4
