@@ -20,8 +20,8 @@ Metrics/BlockLength:
 Metrics/MethodLength:
   Enabled: false
 
-Bundler/OrderedGems:
-  Enabled: false
+Gemspec/OrderedDependencies:
+  Enabled: False
 
 RSpec/ExampleLength:
   Enabled: false
