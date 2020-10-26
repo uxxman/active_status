@@ -6,6 +6,7 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
+    - gemfiles/*
     - spec/dummy/**/*
 
 Style/Documentation:
@@ -13,19 +14,11 @@ Style/Documentation:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
-Metrics/ClassLength:
-  Enabled: false
 Metrics/BlockLength:
-  Enabled: false
-Metrics/MethodLength:
   Enabled: false
 
 Gemspec/OrderedDependencies:
   Enabled: False
 
-RSpec/ExampleLength:
-  Enabled: false
-RSpec/ContextWording:
-  Enabled: false
 RSpec/MultipleExpectations:
   Enabled: false
