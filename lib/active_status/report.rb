@@ -13,7 +13,7 @@ module ActiveStatus
 
           add_error(Error.new(check, 'failure')) unless success
         rescue StandardError => e
-          add_error(Error.new(check, e.class, e.message))
+          add_error(Error.new(check, e.class.name, e.message))
         end
       end
     end
