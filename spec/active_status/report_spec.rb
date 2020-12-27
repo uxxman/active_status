@@ -1,38 +1,53 @@
-require 'rails_helper'
-
 RSpec.describe ActiveStatus::Report do
   let(:report) { described_class.new }
 
-  describe '#initialize' do
-    it { expect(report.errors).to be_empty }
-  end
-
-  describe '.define_check' do
-    described_class.define_check(:name, proc {})
-
-    it { expect(report).to respond_to(:name) }
+  describe '#errors' do
+    it 'is empty by default' do
+      expect(report.errors).to be_empty
+    end
   end
 
   describe '#build' do
-    context 'without errors' do
+    context 'when successful' do
       before { report.build }
 
-      it { expect(report.errors).to be_empty }
-      it { expect(report.success?).to be(true) }
+      it 'has no errors' do
+        expect(report.errors).to be_empty
+      end
     end
 
-    context 'with errors' do
+    context 'when unsuccessful' do
       before do
-        ActiveStatus.configuration.check :check_name do
+        ActiveStatus.config.check :check1 do
           raise StandardError
+        end
+
+        ActiveStatus.config.check :check2 do
+          false
         end
 
         report.build
       end
 
-      it { expect(report.success?).to be(false) }
-      it { expect(report.errors).not_to be_empty }
-      it { expect(report.errors.first.name).to eq(:check_name) }
+      it 'has errors' do
+        expect(report.errors.size).to eq(2)
+      end
+    end
+  end
+
+  describe '#success?' do
+    context 'without error' do
+      it 'returns true' do
+        expect(report.success?).to be(true)
+      end
+    end
+
+    context 'with errors' do
+      it 'returns false' do
+        report.add_error(ActiveStatus::Error.new('name', 'error'))
+
+        expect(report.success?).to be(false)
+      end
     end
   end
 end

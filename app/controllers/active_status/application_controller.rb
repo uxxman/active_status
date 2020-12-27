@@ -5,9 +5,9 @@ module ActiveStatus
       report.build
 
       if report.success?
-        head ActiveStatus.configuration.success
+        head ActiveStatus.config.success_code
       else
-        render json: report.errors, status: ActiveStatus.configuration.error
+        render json: report.errors, status: ActiveStatus.config.error_code
       end
     end
   end

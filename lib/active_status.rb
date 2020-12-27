@@ -1,20 +1,15 @@
 require 'active_status/error'
-require 'active_status/engine'
 require 'active_status/report'
+require 'active_status/version'
 require 'active_status/configuration'
+require 'active_status/engine' if defined?(Rails::Engine)
 
 module ActiveStatus
-  class << self
-    attr_accessor :configuration
+  def self.config
+    @config ||= Configuration.new
   end
 
   def self.configure
-    self.configuration ||= Configuration.new
-
-    yield configuration
-  end
-
-  def self.reconfigure
-    self.configuration = Configuration.new
+    yield config
   end
 end

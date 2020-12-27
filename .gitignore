@@ -1,13 +1,13 @@
+.DS_Store
 .bundle/
-log/*.log
-pkg/
-coverage/
-spec/dummy/db/*.sqlite3
-spec/dummy/db/*.sqlite3-journal
-spec/dummy/db/*.sqlite3-*
-spec/dummy/log/*.log
-spec/dummy/storage/
-spec/dummy/tmp/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+Gemfile.lock
 
 # appraisal lock files
 *.gemfile.lock

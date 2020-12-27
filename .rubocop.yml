@@ -1,14 +1,10 @@
 require:
-  - rubocop-rails
   - rubocop-rspec
   - rubocop-packaging
   - rubocop-performance
 
 AllCops:
   NewCops: enable
-  Exclude:
-    - gemfiles/*
-    - spec/dummy/**/*
 
 Style/Documentation:
   Enabled: false
@@ -16,10 +12,4 @@ Style/FrozenStringLiteralComment:
   Enabled: false
 
 Metrics/BlockLength:
-  Enabled: false
-
-Gemspec/OrderedDependencies:
-  Enabled: False
-
-RSpec/MultipleExpectations:
   Enabled: false

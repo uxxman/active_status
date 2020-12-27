@@ -23,12 +23,6 @@ jobs:
       - name: Install dependencies
         run: bundle install
 
-      - name: Appraisal dependencies
-        run: bundle exec appraisal install
-      
-      - name: Appraisal tests
-        run: bundle exec appraisal rspec
-
       - name: Run tests
         run: bundle exec rspec
 

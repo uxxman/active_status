@@ -1,7 +1,7 @@
 ActiveStatus.configure do |config|
-  # config.success = 200
-  # config.error   = 503
-  # config.verbose = false
+  # config.verbose      = false
+  # config.error_code   = 503
+  # config.success_code = 200
 
   # Example for checking database connection
   #

@@ -23,15 +23,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'rails', '>= 5.2'
-
-  spec.add_development_dependency 'appraisal', '~> 2.3'
-  spec.add_development_dependency 'simplecov', '~> 0.17.1'
   spec.add_development_dependency 'rake', '~> 13.0', '>= 13.0.1'
-  spec.add_development_dependency 'sqlite3', '~> 1.4', '>= 1.4.2'
-  spec.add_development_dependency 'rspec-rails', '~> 4.0', '>= 4.0.1'
-  spec.add_development_dependency 'rubocop-rails', '~> 2.8', '>= 2.8.1'
-  spec.add_development_dependency 'rubocop-rspec', '~> 1.44', '>= 1.44.1'
+  spec.add_development_dependency 'rspec', '~> 3.10'
   spec.add_development_dependency 'rubocop-packaging', '~> 0.5.1'
   spec.add_development_dependency 'rubocop-performance', '~> 1.8', '>= 1.8.1'
+  spec.add_development_dependency 'rubocop-rspec', '~> 1.44', '>= 1.44.1'
+  spec.add_development_dependency 'simplecov', '~> 0.17.1'
 end

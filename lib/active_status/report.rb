@@ -6,22 +6,24 @@ module ActiveStatus
       @errors = []
     end
 
-    def self.define_check(name, body)
-      define_method(name, body)
-    end
-
     def build
-      ActiveStatus.configuration.checks.each do |check|
+      ActiveStatus.config.checks.each do |check, method|
         begin
-          send(check)
+          success = method.call
+
+          add_error(Error.new(check, 'failure')) unless success
         rescue StandardError => e
-          @errors << Error.new(check, e.class, e.message)
+          add_error(Error.new(check, e.class, e.message))
         end
       end
     end
 
     def success?
       @errors.empty?
+    end
+
+    def add_error(error)
+      @errors << error
     end
   end
 end
