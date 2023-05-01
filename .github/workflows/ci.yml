@@ -27,6 +27,6 @@ jobs:
         run: bundle exec rspec
 
       - name: Code Climate
-        uses: paambaati/codeclimate-action@v3.2.0
+        uses: paambaati/codeclimate-action@v4.0.0
         env:
           CC_TEST_REPORTER_ID: 04f327766201022b95cfa162687d44617cdf21e48bb45b3b4c9ab8f0788634c6
